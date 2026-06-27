@@ -33,7 +33,11 @@ def run_part_1_exploration(df: pd.DataFrame):
     print("Brakujace wartosci (isnull().sum()):")
     print("-" * 50)
     print(info['null_counts'].to_string())
-    print(f"\n-> Suma brakow: {info['total_nulls']}")
+    print(f"\n-> Suma brakow: {info['total_nulls']}\n")
+    
+    print("Statystyki opisowe (describe()):")
+    print("-" * 50)
+    print(df.describe().to_string())
     
     print("\n" + "=" * 70)
     print("KOMENTARZ - ANALIZA DIAGNOSTYCZNA:")

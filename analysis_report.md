@@ -2,23 +2,6 @@
 
 Raport przedstawia wyniki automatycznej eksploracyjnej analizy danych (EDA) rynku nieruchomości w Warszawie, wykonanej za pomocą skryptów wchodzących w skład aplikacji.
 
----
-
-## 📂 Struktura Projektu
-
-Aplikacja została podzielona na logiczne foldery o angielskich nazwach, co zapewnia profesjonalną strukturę repozytorium:
-
-- **`App/`** – Moduły źródłowe aplikacji:
-  - [`apartment_analysis.py`](file:///c:/Users/Amelka%20i%20Zuzia/Desktop/BigData/App/apartment_analysis.py) – Główny skrypt koordynujący przebieg analizy.
-  - [`data_processing.py`](file:///c:/Users/Amelka%20i%20Zuzia/Desktop/BigData/App/data_processing.py) – Klasy/funkcje do ładowania, czyszczenia i obliczeń statystycznych.
-  - [`visualization.py`](file:///c:/Users/Amelka%20i%20Zuzia/Desktop/BigData/App/visualization.py) – Funkcje odpowiedzialne za stylizację i generowanie wykresów.
-- **`Data/`** – Zbiory danych:
-  - [`warsaw_apartments.csv`](file:///c:/Users/Amelka%20i%20Zuzia/Desktop/BigData/Data/warsaw_apartments.csv) – Główny plik z danymi ofertowymi.
-- **`GenData/`** – Skrypty pomocnicze:
-  - [`generate_data.py`](file:///c:/Users/Amelka%20i%20Zuzia/Desktop/BigData/GenData/generate_data.py) – Skrypt do generowania syntetycznych danych ofertowych.
-- **`Plots/`** – Katalog z wygenerowanymi wizualizacjami w formacie PNG.
-
----
 
 ## 🖥️ Konsolowy Zapis Działania Programu
 
@@ -61,6 +44,18 @@ odleglosc_od_centrum_km    0
 cena_pln                   0
 
 -> Suma brakow: 0
+
+Statystyki opisowe (describe()):
+--------------------------------------------------
+          id_oferty    metraz_m2  liczba_pokoi       pietro   rok_budowy  odleglosc_od_centrum_km      cena_pln
+count   2000.000000  2000.000000   2000.000000  2000.000000  2000.000000              2000.000000  2.000000e+03
+mean   11000.500000    56.965758      3.085500     5.415500  1993.889500                 6.222265  8.809612e+05
+std      577.494589    30.787760      1.264907     3.501998    21.076632                 3.909166  7.499763e+05
+min    10001.000000    18.000000      1.000000     0.000000  1800.000000                 0.500000  6.177632e+04
+25%    10500.750000    40.800000      2.000000     2.000000  1979.000000                 3.350000  5.685120e+05
+50%    11000.500000    55.350000      3.000000     5.000000  1997.000000                 5.550000  8.095755e+05
+75%    11500.250000    69.900000      4.000000     8.000000  2011.000000                 8.322500  1.070190e+06
+max    12000.000000   585.187341      6.000000    11.000000  2050.000000                25.000000  2.292390e+07
 
 ======================================================================
 KOMENTARZ - ANALIZA DIAGNOSTYCZNA:
